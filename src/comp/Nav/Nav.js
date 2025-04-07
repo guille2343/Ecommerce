@@ -1,6 +1,4 @@
 import React from "react";
-import { MdLocalShipping } from "react-icons/md";
-import { IoSearchOutline } from "react-icons/io5";
 import { CiUser } from "react-icons/ci";
 import { CiLogout } from "react-icons/ci";
 import { CiLogin } from "react-icons/ci";
@@ -12,51 +10,6 @@ const Nav = () => {
   const { loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
   return (
     <div className="header">
-      <div className="top-header">
-        <div className="icon">
-          <MdLocalShipping />
-        </div>
-        <div className="info">
-          <p>Free Shipping When Shopping Upto $1000</p>
-        </div>
-      </div>
-      <div className="mid-header">
-        <div className="logo">
-          <img src="../images/Logo.png" alt="Logo" />
-        </div>
-        <div className="search-box">
-          <input type="text" placeholder="search" />
-          <button>
-            <IoSearchOutline />
-          </button>
-        </div>
-        {isAuthenticated ? ( // logout button (boton de salida)
-          <div className="user">
-            <div className="icon">
-              <CiLogout />
-            </div>
-            <div className="btn">
-              <button
-                onClick={() =>
-                  logout({ logoutParams: { returnTo: window.location.origin } })
-                }
-              >
-                Logout
-              </button>
-            </div>
-          </div>
-        ) : (
-          //login button (boton de inicio )
-          <div className="user">
-            <div className="icon">
-              <CiLogin />
-            </div>
-            <div className="btn">
-              <button onClick={() => loginWithRedirect()}>Login</button>
-            </div>
-          </div>
-        )}
-      </div>
       <div className="last-header">
         <div className="user-profile">
           {isAuthenticated ? (
@@ -109,8 +62,22 @@ const Nav = () => {
             </li>
           </ul>
         </div>
-        <div className="offer">
-          <p>Flat 10% Over All Iphone</p>
+        <div className="user">
+          {isAuthenticated ? (
+            <div className="btn">
+              <button
+                onClick={() =>
+                  logout({ logoutParams: { returnTo: window.location.origin } })
+                }
+              >
+                Logout
+              </button>
+            </div>
+          ) : (
+            <div className="btn">
+              <button onClick={() => loginWithRedirect()}>Login</button>
+            </div>
+          )}
         </div>
       </div>
     </div>

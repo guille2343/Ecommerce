@@ -9,88 +9,6 @@
   width: 100%;
 }
 
-.header .top-header {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  background: #f6f7f8;
-}
-
-.header .top-header .icon {
-  color: #ababab;
-  font-size: 19px;
-}
-
-.header .top-header .info {
-  margin-left: 10px;
-  color: #8a8a8a;
-}
-
-.header .mid-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 40px;
-}
-
-.header .mid-header .logo img {
-  cursor: pointer;
-  object-fit: cover;
-  height: 50px; /* Ajusta el tamaño del logo según sea necesario */
-}
-
-.header .mid-header .search-box {
-  display: flex;
-  align-items: center;
-}
-
-.header .mid-header .search-box input {
-  padding: 10px;
-  outline: none;
-  border: 1px solid #ccc;
-  border-radius: 5px 0 0 5px;
-  border-right: none;
-}
-
-.header .mid-header .search-box button {
-  padding: 10px;
-  border: 1px solid #ccc;
-  background: #ff69b4; /* Color rosa para el botón de búsqueda */
-  color: white;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-  transition: background 0.3s ease; /* Transición suave para el efecto hover */
-}
-
-.header .mid-header .search-box button:hover {
-  background: #ff1493; /* Color rosa más oscuro al hacer hover */
-}
-
-.header .user {
-  display: flex;
-  align-items: center;
-}
-
-.header .user .icon {
-  color: #ababab;
-  font-size: 19px;
-  margin-right: 10px;
-}
-
-.header .user .btn button {
-  padding: 10px 20px;
-  background: #ff69b4; /* Color rosa para el botón de login */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease; /* Transición suave para el efecto hover */
-}
-
-.header .user .btn button:hover {
-  background: #ff1493; /* Color rosa más oscuro al hacer hover */
-}
-
 .header .last-header {
   width: 100%;
   padding: 10px 10px;
@@ -148,17 +66,21 @@
   color: #ff1493;
 }
 
-.header .last-header .offer {
-  margin-right: 20px;
-  padding: 10px 20px;
-  background: #fed700;
-  border-radius: 20px;
+.header .last-header .user {
+  display: flex;
+  align-items: center;
 }
 
-.header .last-header .offer p {
-  margin-top: 5 px;
-  text-transform: uppercase;
-  color: #232323;
-  font-weight: 600;
-  font-size: 14px;
+.header .last-header .user .btn button {
+  padding: 10px 20px;
+  background: #ff69b4; /* Color rosa para el botón de login */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+.header .last-header .user .btn button:hover {
+  background: #ff1493; /* Color rosa más oscuro al hacer hover */
 }

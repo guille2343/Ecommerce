@@ -29,15 +29,20 @@
   max-width: 100%;
   display: flex;
   margin-top: 20px;
-  justify-content: center; /* Centrar contenido */
 }
 
 .shop .container .left-box {
   width: 25%;
+  position: fixed; /* Fijar el contenedor de categorías */
+  top: 0;
+  left: 0;
+  height: 100%; /* Ocupa toda la altura de la pantalla */
+  background: #f6f6f6; /* Fondo gris */
+  padding: 20px;
+  overflow-y: auto; /* Permitir desplazamiento vertical */
 }
 
 .shop .container .left-box .category {
-  border: 3px solid #f6f6f6;
   width: 100%;
 }
 
@@ -73,6 +78,9 @@
 
 .shop .container .right-box {
   width: 75%;
+  margin-left: 25%; /* Dejar espacio para el contenedor fijo */
+  overflow-y: auto; /* Permitir desplazamiento vertical */
+  padding-left: 20px;
 }
 
 .shop .container .right-box .header {
