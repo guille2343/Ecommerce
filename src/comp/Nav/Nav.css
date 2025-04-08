@@ -7,23 +7,28 @@
 
 .header {
   width: 100%;
+  position: fixed; /* Hace que el nav se quede fijo arriba */
+  top: 0;
+  left: 0;
+  z-index: 999; /* Asegura que esté sobre el resto del contenido */
 }
 
 .header .last-header {
   width: 100%;
-  padding: 10px 10px;
+  padding: 10px;
   display: flex;
   background: #232323;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header .last-header .user-profile {
   display: flex;
-  margin-top: 10px;
+  align-items: center;
 }
 
 .header .last-header .user-profile .icon {
-  padding: 10px 10px;
+  padding: 10px;
   background: #fff;
   border-radius: 20%;
 }
@@ -43,19 +48,19 @@
 }
 
 .header .last-header .nav {
-  margin-top: 15px;
+  margin-top: 0;
 }
 
 .header .last-header .nav ul {
   display: flex;
-}
-
-.header .last-header .nav ul li {
   list-style: none;
 }
 
-.header .last-header .nav ul li .link {
+.header .last-header .nav ul li {
   margin-right: 20px;
+}
+
+.header .last-header .nav ul li .link {
   text-decoration: none;
   color: #fff;
   font-weight: 600;
@@ -73,14 +78,19 @@
 
 .header .last-header .user .btn button {
   padding: 10px 20px;
-  background: #ff69b4; /* Color rosa para el botón de login */
+  background: #ff69b4;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: 0.3s ease; /* Transición suave para el efecto hover */
+  transition: 0.3s ease;
 }
 
 .header .last-header .user .btn button:hover {
-  background: #ff1493; /* Color rosa más oscuro al hacer hover */
+  background: #ff1493;
+}
+
+/* Agrega margen superior al contenido principal para que no quede tapado */
+.main-content {
+  margin-top: 90px; /* Ajusta según el alto del Nav */
 }
